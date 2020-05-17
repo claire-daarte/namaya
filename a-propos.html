@@ -1,0 +1,302 @@
+<!-- ============================================================== HEAD ============================================================== -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, minimum-scale=1" name="viewport">
+
+  <title>NAMAYA | Achat et vente d'œuvres d'art</title>
+  <meta name="keywords" content="art, amateur, oeuvre, peinture, sculpture, photographie, photo">
+  <meta name="description" content="achat et vente d'art amateur">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Fontawesome CDN for icons -->
+  <script src="https://kit.fontawesome.com/95bd223ac9.js" crossorigin="anonymous"></script>
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+
+</head>
+<!-- ============================================================== END HEADER ============================================================== -->
+
+<!-- ============================================================== HEADER ============================================================== -->
+  <body>
+    <div id="side-menu-toggle">
+      <div class="burger-menu-line-1"> </div>
+      <div class="burger-menu-line-2"> </div>
+      <div class="burger-menu-line-3"> </div>
+    </div>
+
+    <div id="header-a-propos">
+      <div class="header-a-propos-opacity"></div>
+    </div>
+        <div id="header-sticky-wrapper" class="sticky-wrapper">
+          <header id="header">
+            <div id="header-menu">
+              <a href="index.html"><img src="assets/img/logo.png" alt="Namaya"></a>
+            </div>
+            <nav id="header-menu-nav">
+              <ul class="nav-menu">
+                <li>
+                    <a class="search-button nav-menu-CTA">
+                    <div class="icon">
+                      <i class="fas fa-search tobechanged" aria-hidden="true"></i>
+                    </div>
+                    <div class="name-search" data-text="Recherche">Recherche</div>
+                  </a>
+                  <a type="button" class="nav-menu-CTA" data-toggle="modal" data-target="#login-popup">
+                    <div class="icon">
+                      <i class="far fa-user"></i>
+                    </div>
+                    <div class="name" data-text="Se connecter">Connexion</div>
+                  </a>
+                  <a href="favoris.html" class="nav-menu-CTA">
+                    <div class="icon">
+                      <i class="far fa-heart"></i>
+                    </div>
+                    <div class="name" data-text="Favoris">Favoris</div>
+                  </a>
+                  <a href="panier.html" class="nav-menu-CTA">
+                    <div class="icon">
+                      <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="name" data-text="Panier">Panier</div>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+        <div class="banner-a-propos-text"> 
+          <h2>Votre nouvelle galerie d'art,</br>ici, chez vous.</h2>
+        </div>
+      </div>
+  </div>
+  <!-- ============================================================== END HEADER ============================================================== -->
+
+  <!-- ============================================================== LOGIN/SIGNUP POPUP ============================================================== -->
+  <div id="login-popup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
+    <div role="document" class="modal-dialog">
+      <div class="popup-block login">
+        <div class="popup-close-button" data-dismiss="modal"> 
+          <i class="fas fa-times"></i>
+        </div> 
+        <div class="popup-header">
+            <div class="popup-tab-login active" id="popup-tabs">
+                <h6 class="popup-active-tab">Se connecter</h6>
+            </div>
+            <div class="popup-tab-create" id="popup-tabs">
+                <h6 class="popup-inactive-tab">S'inscrire</h6>
+            </div>
+        </div>
+
+          <div class="popup-content">
+
+            <div class="popup-content-login show"> 
+              <form novalidate method="post" action="form.php" id="popup_login_form">
+                <div class = "popup-row">
+                  <input required type="email" name ="email" id="popup-content-login-input-email" class="popup-content-login-input" placeholder="E-mail"/>
+                  <span class="popup-content-input-error"><p id="popup_content_login_email_error"></p></span>
+                </div>
+                <div class = "popup-row">
+                  <input required type="password" name="password" id="popup-content-login-input-password" class="popup-content-login-input" placeholder="Mot de passe"/>
+                  <span id="popup-content-login-input-password-show" class="far fa-eye"></span>
+                  <span class="popup-content-input-error"><p id="popup_content_login_password_error"></p></span>
+                </div>
+                <div class = "popup-row">
+                  <a class="popup-forgotten-password" href="#">Mot de passe oublié ?</a>
+                </div>
+                <div class = "popup-row">
+                  <button type="submit" class="popup-content-button">Connexion</button>
+                </div>
+              </form>
+              <div class = "popup-row">
+                <p class="popup-subscription">Vous n'avez pas de compte ? <a class="popup-subscription-link" href="#">Créez un compte</a></p>
+              </div>
+            </div>
+
+            <div class="popup-content-create hide">
+              <form novalidate method="post" action="form.php" id="popup_create_form">
+                <div class="popup-row">
+                    <input required type="text" name="username" id="popup-content-create-input-username" class="popup-content-create-input" placeholder="Nom d'utilisateur"/>
+                    <span class="popup-content-input-error"><p id="popup_content_create_username_error"></p></span>
+                </div>
+                 <div class = "popup-row">
+                    <input required type="text" name="email" id="popup-content-create-input-email" class="popup-content-create-input" placeholder="E-mail"/>
+                    <span class="popup-content-input-error"><p id="popup_content_create_email_error"></p></span>
+                </div>
+                <div class = "popup-row">
+                    <input required type="password" name="password" id="popup-content-create-input-password" class="popup-content-create-input" placeholder="Mot de passe"/>
+                    <span id="popup-content-create-input-password-show" class="far fa-eye"></span>
+                    <span class="popup-content-input-error"><p id="popup_content_create_password_error"></p></span>
+                </div>
+                <div class = "popup-row-smaller-margin">
+                  <input type="checkbox" id="popup-content-create-checkbox-newsletter" class="popup-content-create-checkbox"/>
+                  <label for="popup-content-create-checkbox-newsletter" class="popup-content-create-checkbox-label">
+                    Je m'inscris à la newsletter
+                  </label>
+                </div>
+                <div class = "popup-row-smaller-margin" style= "margin: 10px 0 0 50px">
+                  <input required type="checkbox" id="popup-content-create-checkbox-legal" class="popup-content-create-checkbox"/>
+                  <label for="popup-content-create-checkbox-legal" class="popup-content-create-checkbox-label">
+                    J'ai lu et accepté les <a class="popup-legal-link" href="#">Conditions Générales de Ventes</a> et les <a class="popup-legal-link" href="#">Conditions Générales d'Utilisation</a>. Je confirme avoir au moins 18 ans.
+                  </label>
+                </div>
+                <div class = "popup-row">
+                  <button type="submit" class="popup-content-button">Inscription</button>
+                </div>
+              </form>
+              <div class = "popup-row">
+                <p class="popup-connection">Vous avez déjà un compte ? <a class="popup-connection-link" href="#">Connectez-vous</a></p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ============================================================== END LOGIN/SIGNUP POPUP ============================================================== -->
+
+<!-- ============================================================== BODY ============================================================== -->
+<!-- <section id="banner-a-propos">
+  <div class="banner-a-propos-container">
+    <div class="banner-a-propos-text"> 
+      <h2>L’avenir des galeries d’art </br> ici, sous vos yeux !</h2>
+    </div>
+  </div>
+</section> -->
+<div class="a-propos-content-container">
+
+  <p class="wow animated a-propos-introduction-text">
+    Namaya est la <i>marketplace</i> qui met en relation les artistes et les amateurs d’art. </br> Rejoindre la communauté Namaya c’est entrer dans un univers de passionnés de l’art sous toutes ses formes !
+  </p>
+
+  <div class="a-propos-content">
+    <div class="row">
+      <div class="wow animated col-md-12">
+        <h2>Vous créez des oeuvres d'art ?</h2>
+        <p>Que vous soyez un <strong>artiste professionnel, semi-professionnel ou amateur</strong>, chez Namaya, on vous accueille à bras ouverts.
+      Vous avez été au coeur de nos réflexions lorsque nous avons créé Namaya. Pour vous, nous avons défini trois objectifs : </p>
+      </div>
+    </div>
+    <div class="row"> 
+      <div class="wow animated col-md-4 a-propos-content-text"> 
+        <img src="assets/img/logo-portfolio.png" class="a-propos-content-logo">
+        <h4>Portfolio</h4>
+        <p>Namaya, c’est l’opportunité de créer son <strong>portfolio en ligne</strong>. Appropriez-vous la plateforme, faites-en votre carte de visite numérique. En plus de pouvoir rassembler toutes vos œuvres, on vous offre l’opportunité de vous exprimer, de connecter vos réseaux sociaux et de faire votre promotion. La rumeur dit que des collectionneurs et galeristes visitent aussi Namaya… Qu’attendez-vous ?</p>
+      </div>
+      <div class="wow animated col-md-4 a-propos-content-text"> 
+        <img src="assets/img/logo-visibilite.png" class="a-propos-content-logo">
+        <h4>Visibilité</h4>
+        <p>Nous savons à quel point il est difficile de se faire connaître en tant qu’artiste. Absence de réponse des galeristes, manque de visibilité sur les réseaux sociaux, … les freins sont nombreux. Ainsi, chez Namaya, nous nous assurerons que vous pourrez toujours exposer vos œuvres à une <strong>large audience de passionnés</strong> !</p>
+      </div>
+      <div class="wow animated col-md-4 a-propos-content-text"> 
+        <img src="assets/img/logo-vente.png" class="a-propos-content-logo">
+        <h4>Vente</h4>
+        <p>Si un particulier aime l’une de vos œuvres - ou plusieurs, on vous souhaite tout le meilleur ! -, vous pouvez la lui <strong>vendre</strong>. Fixez votre prix, convenez d'un rendez-vous avec votre acquéreur et le tour est joué ! Et comme nous savons que certaines de vos œuvres vous sont particulièrement chères, tout ce que vous publiez n’est pas à vendre : c’est vous et vous seul qui choisissez si une œuvre est ouverte à la vente ou non.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="wow animated col-md-12 a-propos-content-text-questions">
+       <!--  <p><strong><em>Vous n’avez à date qu’une seule œuvre à exposer ?</em></strong> Il faut un début à tout. Une œuvre suffit pour créer sa page artiste sur Namaya. Vous bénéficierez directement d’une audience qui pourra alors entrer en contact avec vous et vous laisser des commentaires. Qui sait, peut-être que votre page artiste s'enrichira plus vite que vous ne le pensez ?</p>
+        <p><strong><em>Vous êtes un artiste prolifique ?</em></strong> Félicitations, on a hâte de voir vos créations ! Vous pourrez facilement mettre en ligne toutes vos œuvres pour créer votre portfolio. </p>
+        <p><strong><em>Vous n’osez pas vous lancer en tant qu'artiste ?</em></strong> Passez un peu de temps sur ce site, nous sommes sûrs que vous trouverez le courage de commencer. Allez, vous y êtes presque !</p> -->
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="wow animated col-md-12">
+        <h2>Vous êtes un particulier ?</h2>
+        <p>Chez Namaya, nous avions l’impression que l’art était réservé à une minorité de fins connaisseurs. Aujourd’hui, grâce à Namaya, <strong>un monde d’artistes est à portée de clic !</strong></p>
+      </div>
+    </div>
+    <div class="row"> 
+      <div class="wow animated col-md-4 offset-md-2 a-propos-content-text"> 
+        <img src="assets/img/logo-decouverte.png" class="a-propos-content-logo">
+        <h4>Découverte</h4>
+        <p>Namaya regorge d’oeuvres réalisées par des artistes talentueux. <strong>Prenez le temps de les découvrir</strong>. Peut-être trouverez-vous la perle rare ? Si vous avez une idée précise de ce que vous recherchez, vous pouvez utiliser les filtres ou la barre de recherche pour n’afficher que les œuvres répondant à vos critères. Vous pouvez également consulter directement les portfolios des artistes que vous appréciez dans la rubrique Artistes. </p>
+      </div>
+      <div class="wow animated col-md-4 a-propos-content-text"> 
+        <img src="assets/img/logo-vente.png" class="a-propos-content-logo">
+        <h4>Achat</h4>
+        <p>Si une œuvre vous plaît et que celle-ci est à vendre, <strong>vous avez la possibilité de l’acheter</strong>. Vous n’avez plus besoin de sillonner les galeries d’art à la recherche d’une pépite. Contactez simplement l’artiste pour lui faire part de votre intérêt et réglez les démarche administratives. En quelques heures, vous serez propriétaire de l’œuvre. Devinez qui aura bientôt un salon à en faire jalouser ses invités ?</p>
+      </div>
+    </div>
+    <div class="row delimiter-footer">
+    </div>
+  </div>
+</div>
+<!-- ============================================================== END BODY ============================================================== -->
+
+<!-- ============================================================== FOOTER ============================================================== -->
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 footer-block">
+        <h3>à propos de Namaya</h2>
+        <ul>
+          <li><a href="a-propos.html">Qui sommes-nous ?</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 footer-block">
+        <h3>Informations légales</h2>
+        <ul>
+          <li><a href="conditions-generales.html">Conditions générales d'utilisation</a></li>
+          <li><a href="cookies.html">Gestion des cookies</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 footer-block">
+        <h3>Des questions ?</h2>
+        <ul>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Nous contacter</a></li>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- ============================================================== END FOOTER ============================================================== -->
+
+<!-- ============================================================== BACK-TO-TOP ============================================================== -->
+<div id="preloader"></div>
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+<!-- ============================================================== END BACK-TO-TOP ============================================================== -->
+
+<!-- =SIDE MENU= -->
+<div id="side-menu" class="hidden">
+  <ul class="side-menu-content">
+    <li><a href="peintures.html">Peintures</a></li>
+    <li><a href="photographies.html">Photographies</a></li>
+    <li><a href="sculptures.html">Sculptures</a></li>
+    <li><a href="sculptures.html">Artistes</a></li>
+    <li><a href="faq.html">FAQ</a></li> 
+    <li><a href="a-propos.html">A propos</a></li>
+  </ul>
+</div>
+
+<!-- ============================================================== JAVASCRIPT ============================================================== -->
+<script src="assets/vendor/jquery/jquery.min.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/wow/wow.min.js"></script>
+<script src="assets/vendor/superfish/superfish.min.js"></script>
+<script src="assets/vendor/hoverIntent/hoverIntent.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+<script src="assets/vendor/venobox/venobox.min.js"></script>
+<script src="assets/vendor/morphext/morphext.min.js"></script>
+<script src="assets/js/main.js"></script>
+<!-- ============================================================== END JAVASCRIPT ============================================================== -->
+
+</body>
+
+</html>
