@@ -1,0 +1,243 @@
+<!-- ============================================================== HEAD ============================================================== -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>NAMAYA | Achat et vente d'œuvres d'art</title>
+  <meta name="keywords" content="art, amateur, oeuvre, peinture, sculpture, photographie, photo">
+  <meta name="description" content="achat et vente d'art amateur">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Fontawesome CDN for icons -->
+  <script src="https://kit.fontawesome.com/95bd223ac9.js" crossorigin="anonymous"></script>
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<!-- ============================================================== END HEADER ============================================================== -->
+
+<!-- ============================================================== HEADER ============================================================== -->
+  <header id="header">
+   
+   <!-- === Header logo === -->
+   <div id="logo" class="pull-left">
+        <a href="index.html"><img src="assets/img/logo.png" alt=""></a>
+        <!-- Uncomment below if you prefer to use a text image -->
+        <!--<h1><a href="index.html">Header 1</a></h1>-->
+    </div>
+    <!-- === Header navigational list === -->
+    <nav id="nav-menu">
+      <nav id="nav-menu-1">
+        <ul class="nav-menu">
+          <li><a href="index.html">Peintures</a></li>
+          <li><a href="photographies.html">Photographies</a></li>
+          <li><a href="sculptures.html">Sculptures</a></li>
+          <li><a href="faq.html">FAQ</a></li>  
+          <li class="mobile-menu"><a href="#portfolio">Recherche</a></li> 
+          <li class="mobile-menu"><a href="#portfolio">Connexion / Inscription</a></li> 
+          <li class="mobile-menu"><a href="#portfolio">Favoris</a></li> 
+          <li class="mobile-menu"><a href="#portfolio">Panier</a></li> 
+        </ul>
+      </nav>
+    <!-- === User-related header (CTAs) === -->
+      <nav id="nav-menu-2">
+        <ul class="nav-menu">
+          <li>
+              <a class="search-button">
+              <div class="icon">
+                <i class="fas fa-search tobechanged" aria-hidden="true"></i>
+              </div>
+              <div class="name-search" data-text="Recherche">Recherche</div>
+            </a>
+            <a type="button" data-toggle="modal" data-target="#login-popup">
+              <div class="icon">
+                <i class="far fa-user"></i>
+              </div>
+              <div class="name" data-text="Se connecter">Connexion</div>
+            </a>
+            <a href="favoris.html">
+              <div class="icon">
+                <i class="far fa-heart"></i>
+              </div>
+              <div class="name" data-text="Favoris">Favoris</div>
+            </a>
+            <a href="panier.html">
+              <div class="icon">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+              <div class="name" data-text="Panier">Panier</div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </nav>
+  
+  </header>
+  <!-- ============================================================== END HEADER ============================================================== -->
+
+  <!-- ======================================================== SEARCH BAR (tablet & mobile) ======================================================== -->
+  <div id="search-bar" class="hidden">
+    <div class="search-bar-container">
+      <div class="icon-search-open">
+        <i class="fas fa-search" aria-hidden="true"></i>
+      </div>
+      <input type="text" placeholder="Que recherchez-vous ?">
+      <div class="icon-search-enter">
+        <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+      </div>
+    </div>
+  </div>
+  <!-- ============================================================== END SEARCH BAR ============================================================== -->
+
+  <!-- ============================================================== LOGIN/SIGNUP POPUP ============================================================== -->
+  <div id="login-popup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
+    <div role="document" class="modal-dialog">
+      <div class="popup-block login">
+        <div class="popup-close-button" data-dismiss="modal"> 
+          <i class="fas fa-times"></i>
+        </div> 
+        <div class="popup-header">
+            <div class="popup-tab-login active" id="popup-tabs">
+                <h6 class="popup-active-tab">Se connecter</h6>
+            </div>
+            <div class="popup-tab-create" id="popup-tabs">
+                <h6 class="popup-inactive-tab">S'inscrire</h6>
+            </div>
+        </div>
+
+          <div class="popup-content">
+
+            <div class="popup-content-login show"> 
+              <form novalidate method="post" action="form.php" id="popup_login_form">
+                <div class = "popup-row">
+                  <input  type="text" name ="email" id="popup-content-login-input-email" class="popup-content-login-input" placeholder="E-mail"/>
+                  <span class="popup-content-input-error"><p id="popup_content_login_email_error"></p></span>
+                </div>
+                <div class = "popup-row">
+                  <input required type="password" name="password" id="popup-content-login-input-password" class="popup-content-login-input" placeholder="Mot de passe"/>
+                  <span id="popup-content-login-input-password-show" class="far fa-eye"></span>
+                  <span class="popup-content-input-error"><p id="popup_content_login_password_error"></p></span>
+                </div>
+                <div class = "popup-row">
+                  <a class="popup-forgotten-password" href="#">Mot de passe oublié ?</a>
+                </div>
+                <div class = "popup-row">
+                  <button type="submit" class="popup-content-button">Connexion</button>
+                </div>
+              </form>
+              <div class = "popup-row">
+                <p class="popup-subscription">Vous n'avez pas de compte ? <a class="popup-subscription-link" href="#">Créez un compte</a></p>
+              </div>
+            </div>
+
+            <div class="popup-content-create hide">
+              <form novalidate method="post" action="form.php" id="popup_create_form">
+                <div class="popup-row">
+                    <input required type="text" name="username" id="popup-content-create-input-username" class="popup-content-create-input" placeholder="Nom d'utilisateur"/>
+                    <span class="popup-content-input-error"><p id="popup_content_create_username_error"></p></span>
+                </div>
+                 <div class = "popup-row">
+                    <input required type="text" name="email" id="popup-content-create-input-email" class="popup-content-create-input" placeholder="E-mail"/>
+                    <span class="popup-content-input-error"><p id="popup_content_create_email_error"></p></span>
+                </div>
+                <div class = "popup-row">
+                    <input required type="password" name="password" id="popup-content-create-input-password" class="popup-content-create-input" placeholder="Mot de passe"/>
+                    <span id="popup-content-create-input-password-show" class="far fa-eye"></span>
+                    <span class="popup-content-input-error"><p id="popup_content_create_password_error"></p></span>
+                </div>
+                <div class = "popup-row-smaller-margin">
+                  <input type="checkbox" id="popup-content-create-checkbox-newsletter" class="popup-content-create-checkbox"/>
+                  <label for="popup-content-create-checkbox-newsletter" class="popup-content-create-checkbox-label">
+                    Je m'inscris à la newsletter
+                  </label>
+                </div>
+                <div class = "popup-row-smaller-margin" style= "margin: 10px 0 0 50px">
+                  <input required type="checkbox" id="popup-content-create-checkbox-legal" class="popup-content-create-checkbox"/>
+                  <label for="popup-content-create-checkbox-legal" class="popup-content-create-checkbox-label">
+                    J'ai lu et accepté les <a class="popup-legal-link" href="#">Conditions Générales de Ventes</a> et les <a class="popup-legal-link" href="#">Conditions Générales d'Utilisation</a>. Je confirme avoir au moins 18 ans.
+                  </label>
+                </div>
+                <div class = "popup-row">
+                  <button type="submit" class="popup-content-button">Inscription</button>
+                </div>
+              </form>
+              <div class = "popup-row">
+                <p class="popup-connection">Vous avez déjà un compte ? <a class="popup-connection-link" href="#">Connectez-vous</a></p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ============================================================== END LOGIN/SIGNUP POPUP ============================================================== -->
+
+<!-- ============================================================== BODY ============================================================== -->
+<div class="work-in-progress-page">
+  <div class="work-in-progress-big"> Oups!</div>
+  <div class="work-in-progress"> Cette page est encore en construction. <br> Revenez bientôt ! </div>
+</div>
+<!-- ============================================================== END BODY ============================================================== -->
+
+<!-- ============================================================== FOOTER ============================================================== -->
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h3>à propos de XXX</h2>
+        <ul>
+          <li><a href="a-propos.html">Qui sommes-nous ?</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h3>Informations légales</h2>
+        <ul>
+          <li><a href="conditions-generales.html">Conditions générales d'utilisation</a></li>
+          <li><a href="cookies.html">Gestion des cookies</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h3>Des questions ?</h2>
+        <ul>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Nous contacter</a></li>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- ============================================================== END FOOTER ============================================================== -->
+
+<!-- ============================================================== BACK-TO-TOP ============================================================== -->
+<div id="preloader"></div>
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+<!-- ============================================================== END BACK-TO-TOP ============================================================== -->
+
+<!-- ============================================================== JAVASCRIPT ============================================================== -->
+<script src="assets/vendor/jquery/jquery.min.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/wow/wow.min.js"></script>
+<script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+<script src="assets/vendor/superfish/superfish.min.js"></script>
+<script src="assets/vendor/hoverIntent/hoverIntent.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+<script src="assets/vendor/venobox/venobox.min.js"></script>
+<script src="assets/vendor/morphext/morphext.min.js"></script>
+<script src="assets/js/main.js"></script>
+<!-- ============================================================== END JAVASCRIPT ============================================================== -->
+
+</body>
+
+</html>
